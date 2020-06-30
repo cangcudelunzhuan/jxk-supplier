@@ -1,0 +1,88 @@
+$itemHeight = 40px;
+
+.main_menu_label
+  vertical-align: middle
+  padding-left:7px
+
+.aside_menu
+  background-color:white
+  color:#333
+  padding-top:25px
+  font-size: 14px
+  font-weight: 400
+  span
+    display: block
+  a
+    color:#333
+    display:block
+    line-height:$itemHeight
+    height:$itemHeight
+  dl
+    padding-left:0
+    margin:0
+    background-color:#F0F2F5
+
+  dt
+    cursor pointer
+    background-color:white
+    position: relative
+    a,span
+      padding-left:15px
+    span
+      height:$itemHeight
+      line-height:$itemHeight
+  
+  dd
+    position:relative
+    display: none
+    >a,>span
+      padding-left:38px
+    >span
+      cursor pointer
+      height:$itemHeight
+      display: block
+      line-height:$itemHeight
+
+
+  .menu_icon
+    font-size:14px
+    margin-right:7px
+
+.menu_status_icon
+  position:absolute
+  right:10px
+  top:11px
+  transition: all .35s ease 0s
+
+.leaf_menu
+  display: none
+  >div
+    line-height:$itemHeight
+    height:$itemHeight
+    a,span
+      padding-left:38px
+
+.current_menu_main
+  dt
+    color:#1590ff;
+    font-weight: bold
+    .menu_status_icon
+      transform: rotate(180deg)
+    a
+      background-color:rgba(21,144,255,.1)
+  dd
+    display: block
+
+
+.current_menu_2
+  >a
+    background-color:rgba(21,144,255,.1)
+  .menu_status_icon
+    transform: rotate(180deg)
+  .leaf_menu
+    display: block
+
+
+.current_menu_3
+  a
+    background-color:rgba(21,144,255,.1)

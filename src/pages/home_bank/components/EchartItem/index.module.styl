@@ -1,0 +1,71 @@
+.chart_outbox
+    display: flex
+    align-items: center
+    .chart_outbox_left
+        width: 20%
+        text-align: center
+        .left_title
+            font-size: 14px
+            line-height: 14px
+        .left_num
+            font-size: 38px
+            line-height: 38px
+            margin-top: 10px
+        .left_bottom
+            font-size: 12px
+            line-height: 12px
+            margin-top: 10px
+            .num 
+                position: relative
+                padding-left: 12px 
+                margin-right: 10px
+            .num:after
+                position: absolute
+                content: ''
+                width: 0
+                height: 0
+                border-left:5px solid transparent
+                border-right:5px solid transparent
+                top: 4px
+                left:0
+            .red
+                color: #F5222D      
+            .red:after              
+                border-bottom:8px solid #F5222D               
+            .blue
+                color: $theme-color
+            .blue:after
+                border-top:8px solid $theme-color
+    .chart_outbox_right
+        flex: 1
+        position: relative
+        .chart_toolbox
+            position: absolute
+            top: 0
+            right: 0
+            z-index: 999
+            display: flex
+            align-items: center
+            width: 100%
+            justify-content: space-between
+            .chart_title
+                font-size: 14px
+                font-weight: bold
+            .chart_toolbox_right
+                display: flex
+                align-items: center
+                .chart_kind_box
+                    display: flex
+                    font-size: 14px
+                    color: rgba(51, 51, 51, 1)
+                    align-items: center
+                    margin: 0
+                    li 
+                        margin-right: 16px
+                        cursor: pointer
+                    .active
+                        color: rgba(24, 144, 255, 1)
+               
+        
+
+    

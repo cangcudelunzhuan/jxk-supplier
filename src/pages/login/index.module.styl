@@ -1,0 +1,145 @@
+.login_page
+  display:grid;
+  grid-template-rows:64px calc(100vh - 128px) 64px;
+  grid-template-columns:100%
+  background:linear-gradient(270deg,rgba(31,99,226,1) 0%,rgba(1,150,255,1) 100%);
+  min-width: 1200px
+.logo_top
+  width:100%
+  height:64px
+  background: #ffffff
+  img 
+    width:149px
+    height:24px
+    display: block
+    margin-top:20px
+    margin-left:125px
+.logo_center
+  height:100%
+  padding-top:70px
+.logo_footer
+  width:100%
+  height:64px
+  background: #fff
+  line-height: 64px
+  text-align: center
+  position relative
+  z-index: 99
+.pos_container
+  width:400px
+.supply_login
+  width:100%
+  display: flex
+  align-items: center
+  justify-content: space-around
+.bg_img1,.bg_img2
+  width:480px
+  height:324px
+  img 
+    width:100%
+    height:100%
+    display: block
+
+// .bg_img1
+  // background:url("../../assets/images/login/login1.png") no-repeat  center center;
+
+.wechat_login
+  background-image:linear-gradient(270deg,rgba(249,82,46,1) 0%,rgba(253,138,91,1) 100%)
+
+.supply_login
+  background-image:linear-gradient(270deg,rgba(31,99,226,1) 0%,rgba(1,150,255,1) 100%);
+
+.logo
+  font-size:24px;
+  color:#fff
+  display: flex
+  align-items: center
+  justify-content: center
+  height:75px
+.logo_content
+  background-color:white
+  border-radius: 4px
+  overflow hidden
+  :global
+    .ant-tabs-nav-wrap
+      padding-left:0px
+      .ant-tabs-nav
+        color:#333
+        width:100%
+        height:56px
+        .ant-tabs-tab
+          width:50%
+          margin-right:0
+          height:56px
+          border-right: 1px solid #EAEAEA
+          text-align: center
+          line-height: 32px
+        .ant-tabs-ink-bar
+          width:50%!important
+        .ant-tabs-tab-active
+          color:#1890FF
+
+
+
+.form_box
+  padding-top:25px
+  padding-left:25px
+  padding-right:25px
+
+.forget
+  text-align: right
+  padding-bottom:30px
+  a,span
+    color:#999
+    font-size:12px
+    cursor pointer
+
+.form_items
+  border-bottom: 1px solid #EBEBEB
+  padding:10px 0
+  input,input:focus
+    border: none
+    outline: none
+    box-shadow: none
+
+.submit_btn
+  width:100%
+
+.showPwd
+  cursor pointer
+  font-size:12px
+  color:#666
+
+.remark
+  background-color:#F6F6F6
+  height:66px
+  line-height: 66px
+  text-align: center
+  color:#999
+  margin-top:40px
+  font-size: 12px
+
+
+.supply_login
+  .forget
+    margin-top:10px
+    a:hover
+      color:$theme-color
+
+.register_box
+  div[align]
+    padding-top:5px
+
+.phone_input
+  width:100%
+  border: none
+  outline: none
+  box-shadow: none
+
+.phone_popinput
+  width:290px
+
+.phone_input,.phone_popinput
+  :global
+    .ant-input-number-handler-wrap
+      display: none

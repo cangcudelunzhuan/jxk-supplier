@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>银联支付</title>
+  <style>
+    #myform{
+      position:absolute;
+      width:320px;
+      text-align:center;
+      left:50%;
+      top:50%;
+      margin-left:-160px;
+    }
+    #myform .submit_btn{
+      border:1px solid #ff4d4f;
+      background-color:#ff4d4f;
+      color:white;
+      cursor: pointer;
+      height:40px;
+      line-height:40px;
+      width:120px;
+      border-radius:3px;
+      font-size:14px;
+    }
+    #myform .submit_btn:hover{
+      background-color:#ff7875;
+    }
+  </style>
+</head>
+<body>
+  <div id="myform">
+    <form action="" method="post">
+      <input class="submit_btn" type="submit" value="立即支付" >
+    </form>
+  </div>
+  <script src="//web-assets.jdxiaokang.com/js/jquery.js"></script>
+  <script>
+    (function(){
+      var apiUrl = 'https://api.jingxiaokang.com/settleservice/getCheckValue';
+      if(location.hostname.indexOf('daily-')>-1||location.hostname.indexOf('localhost')>-1){
+        apiUrl = 'https://daily-api.jdxiaokang.com/settleservice/getCheckValue';
+      }
+      
+      function getRequest (urlQuery) {
+        urlQuery = urlQuery || location.search;
+        if(urlQuery.indexOf('//')>-1){
+          urlQuery = urlQuery.replace(/[^?]+\?/,'?');
+        }
+        urlQuery = urlQuery.slice(1);
+        var result = {};
+        var kvs = urlQuery.split('&');
+        kvs.forEach(function(item){
+          var paramsItems = item.split('=');
+          result[paramsItems[0]] = paramsItems[1];
+        });
+        return result;
+      }
+
+    var originParams = getRequest();
+    var userToken = originParams.t;
+    delete originParams.t;
+    
+    function _(vaule){
+      return vaule.replace(/[A-Z]/g, function(a){return '_'+a.toLowerCase()});
+    }
+
+    $.ajax({
+      url: apiUrl,
+      data: JSON.stringify(originParams),
+      type: 'post',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type':'application/json; charset=UTF-8',
+        token: userToken,
+        jdxiaokang_client: 'PC'
+      },
+      success: function(resModel){
+        var $form = $('form');
+        if(resModel.responseCode===0){
+          for(var i in resModel.entry){
+            if(i==='url'){
+              $form.attr('action', resModel.entry[i]);
+            }else{
+              $form.append('<input type="hidden" name="'+_(i)+'" value="'+resModel.entry[i]+'" />');
+            }
+          }
+          $form.trigger('submit');
+        }else{
+          alert(resModel.message);
+        }
+      }
+    });
+
+    })()
+  </script>
+</body>
+</html>

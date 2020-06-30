@@ -1,0 +1,77 @@
+$headerHeight = 64px;
+
+.layout_wrap
+  position relative
+
+.aside_menu
+  width:256px
+  min-height:100vh
+  position:absolute
+  left:0
+  top:0
+  bottom: 0
+  background-color:white
+
+.logo
+  height:$headerHeight
+  background:url("../../assets/images/header/logo.png") no-repeat center center $theme-color
+  background-size:auto 40%
+
+.photo
+  width:32px
+  height:32px
+  border:1px solid #f1f1f1
+  border-radius:50%
+
+.right_box
+  margin-left 256px
+.top_bar
+  height:$headerHeight
+  background-color:white
+  padding-left:30px
+  padding-right:10px
+  color:#5E5E5E
+
+.user_box
+  height:100%
+  color:#999
+  text-align: right
+
+.user_drop_menu
+  background-color white
+  a,span
+    display block
+    cursor pointer
+    line-height 30px
+    color #5E5E5E
+    text-align center
+    padding-left 10px
+    padding-right 10px
+    border-top 1px solid #f7f7f7
+    &:first-child
+      border-top none
+    &:hover
+      background-color #EEEEEE
+      color #1D1D1D
+.username
+  margin-left:5px
+
+.user_name_wraper
+  display: inline-block
+  margin-left:10px
+  padding-left:10px
+  padding-top:18px
+  padding-right:20px
+
+.main
+  padding:25px
+  overflow-x: auto
+  overflow-y: auto
+  max-height: calc(100vh - 64px)
+  max-width: calc(100vw - 256px)
+
+.main_container
+  min-width: 1184px // 1440
+
+.content
+  min-height:calc(100vh - 64px - 50px)

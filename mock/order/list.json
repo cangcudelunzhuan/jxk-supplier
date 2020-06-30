@@ -1,0 +1,30 @@
+{
+  "status": true,
+  "responseCode": 0,
+  "entry": {
+    "records": [
+      {
+        "id": 1111,
+        "name": "京小康",
+        "count": 50,
+        "currency": 120,
+        "status": 1
+      },
+      {
+        "id": 2222,
+        "name": "京小康2",
+        "count": 20,
+        "currency": 180,
+        "status": 2
+      },
+      {
+        "id": 3333,
+        "name": "京小康3",
+        "count": 50,
+        "currency": 120,
+        "status": 1
+      }
+    ],
+    "totalRecordSize": 80 },
+  "message": "success"
+}

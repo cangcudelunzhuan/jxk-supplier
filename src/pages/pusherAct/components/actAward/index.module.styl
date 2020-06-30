@@ -1,0 +1,65 @@
+
+
+.inline_box
+  position :relative
+  z-index:1
+  .right_box
+    position: absolute
+    width: 50%
+    left:52%
+    z-index: 0
+  .icon
+    position: absolute
+    top: 10px
+    left:-14px 
+    bottom: 0
+    right: 0
+    margin: 0 auto
+
+
+.content_box
+  margin-bottom: 20px 
+  .delete_box
+    position: relative
+    width: 300px
+    margin: 0 auto
+    .delete_icon
+      position: absolute
+      right: 0px
+      top: 0px
+      font-size: 16px
+      cursor:pointer
+      z-index :99
+
+.addbox
+  display: flex
+  align-items: center
+  .lable
+    text-align: right 
+.goodtype_item
+  display: flex
+  align-items: center
+  width: 800px
+  margin-left: -8px
+  flex-wrap: wrap
+  border-bottom: 1px dotted #dfdfdf
+  padding: 10px 0
+  position: relative
+  .line
+    margin-right:10px
+  .item_inbox
+    display: flex
+    align-items: center
+  .item_inbox+.item_inbox
+    margin-left: 20px
+  :global
+    .ant-upload, .ant-upload-list-picture-card-container, .ant-upload-list-picture-card .ant-upload-list-item
+      margin-bottom: 0
+    .ant-upload-list-picture-card-container, .ant-upload.ant-upload-select-picture-card
+      margin-top: 8px
+    .ant-form-item-control
+      line-height: 1
+    .has-error .ant-form-explain, .has-error .ant-form-split
+      position: absolute
+      z-index:9
+      min-width:150px

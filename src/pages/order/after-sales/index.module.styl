@@ -1,0 +1,75 @@
+.after_sales_page
+  :global
+    .show-image
+      display: inline-block
+      margin-right: 10px
+      vertical-align: middle
+
+.ui_table
+  border-left-style:solid
+  border-left-width: 1px
+  border-top-style:solid
+  border-top-width: 1px
+  border-right-style:solid
+  border-right-width: 1px
+  width: 100%
+  border-radius:8px
+  th
+    background-color:#FAFAFA
+    width:180px
+    text-align: right
+  th,td
+    border-bottom:1px solid #E8E8E8
+    padding:10px 15px
+    height:54px
+
+// 采购端
+.ui_table_bg1
+  border-left-color:lighten($theme-color_2, 60%)
+  border-top-color:lighten($theme-color_2, 60%)
+  border-right-color:lighten($theme-color_2, 60%)
+  tr:last-child
+    th,td
+      border-bottom:1px solid lighten($theme-color_2, 60%)
+
+// 供应商端
+.ui_table_bg2
+  border-left-color:lighten($theme-color, 60%)
+  border-top-color:lighten($theme-color, 60%)
+  border-right-color:lighten($theme-color, 60%)
+  tr:last-child
+    th,td
+      border-bottom:1px solid lighten($theme-color, 60%)
+
+
+// 底部操作栏
+.handler_box
+  padding-top:16px
+  text-align: center
+  padding-bottom:24px
+
+// 换退货合计
+.total_money
+  text-align: right
+  margin-top:25px
+  margin-bottom:30px
+  var
+    color: #FC1717
+
+.upload_add
+  background-color:#fafafa
+  border:1px dashed #d9d9d9
+  display: inline-block
+  vertical-align: middle
+  cursor pointer
+  width:52px
+  height:52px
+  text-align: center
+  line-height: 52px
+  border-radius:3px
+  font-size: 26px
+
+.goods_img
+  width:50px
+  height:50px
+  border-radius:4px

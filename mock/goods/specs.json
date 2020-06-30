@@ -1,0 +1,32 @@
+{
+
+  "status":true,
+  
+  "message":"异常错误数据",
+  "responseCode":0,
+  
+  "entry":[{
+  
+  "id":1,
+  
+  "specsName":"尺寸",
+  
+  "specsValues":[
+    {"valueId":123,"value":"XL"},
+    {"valueId":3,"value":"XXL"},
+    {"valueId":4,"value":"M"}
+  ]
+  },{
+  
+    "id":1,
+    
+    "specsName":"颜色",
+    
+    "specsValues":[
+      {"valueId":123,"value":"黑色"},
+      {"valueId":3,"value":"红色"},
+      {"valueId":4,"value":"绿色"}
+    ]
+    
+    }]
+}

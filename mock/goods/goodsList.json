@@ -1,0 +1,22 @@
+{
+  "status": true,
+  "responseCode":0,
+  "entry": {
+    "records": [
+      {
+        "id": 1,
+        "ItemId": 123456,
+        "mainImgUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+        "itemTitle": "2018 iPhone XS Max 128GB",
+        "brandName": "Apple Inc.",
+        "salesNum": 123,
+        "editStatus": "notSubmit",
+        "shelfStatus": 1,
+        "sort":123,
+        "salesQty":123
+      }
+    ],
+    "totalRecordSize": 80
+  },
+  "message": "success"
+}

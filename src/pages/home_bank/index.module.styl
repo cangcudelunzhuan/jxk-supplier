@@ -1,0 +1,80 @@
+.contentInner
+  padding 24px 28px
+  background rgba(252,250,251,1);
+.textStyle
+  background #fff   
+  height: 120px
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+.text_top_inner
+  font-size: 16px
+  color: #666666
+.text_bot_inner
+  font-size: 30px
+  color: #333333
+.cardHead
+  display: flex
+  align-items: center
+
+.card_box
+  margin-top:20px 
+  :global
+    .ant-card-head
+      padding: 0 15px
+      min-height: 35px
+      border-bottom: 1px solid #F0F2F5;
+    .ant-card-head-title
+      padding: 8px 13px
+      font-size: 14px
+      line-height: 18px
+      position: relative
+    .ant-card-head-title:after
+      position: absolute
+      height :14px
+      top: 0
+      left:0
+      bottom: 0
+      margin: auto 0
+      border-left: 4px solid $theme-color
+      z-index: 3
+      content: ''
+.tobo_box
+  display: flex
+  align-items: center
+  .todo_item
+    text-align: center
+    flex: 1
+    .todo_item_title_box
+      font-size: 20px
+      line-height: 20px
+      .todo_item_title
+        color: #F5222D
+    .todo_item_content
+      margin-top: 15px
+      font-size: 14px
+      line-height: 14px
+      font-weight: bold
+    .todo_item_content.active
+      color: $theme-color
+.overview_outbox
+  :global
+    .ant-card-body
+      padding: 30px 24px
+.over_item
+  flex: 1
+  text-align: center
+  .over_item_title
+    font-size: 38px
+    font-weight: bold
+    line-height: 38px
+  .over_item_content
+    font-size: 14px
+    line-height: 14px
+    color: #666666
+    margin-top: 15px
+
+        
+
+ 

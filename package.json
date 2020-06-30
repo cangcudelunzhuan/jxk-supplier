@@ -1,0 +1,64 @@
+{
+  "name": "supplier-admin",
+  "version": "1.0.7",
+  "description": "供应商管理后台",
+  "main": "index.js",
+  "scripts": {
+    "pack": "rm -rf ./package-lock.json && npm install @jxkang/utils@latest && npm install @jxkang/web-cmpt@latest && rm -rf ./package-lock.json",
+    "start": "react-builder dev -p 3520",
+    "build": "react-builder build",
+    "builder": "rm -rf ./package-lock.json && npm install && rm -rf ./package-lock.json && RUN_ENV={env:1} react-builder build && tar cvf build.tar build",
+    "builder:pre": "rm -rf ./package-lock.json && npm install && rm -rf ./package-lock.json && RUN_ENV={env:2} react-builder build && tar cvf build.tar build",
+    "builder:daily": "rm -rf ./package-lock.json && npm install && rm -rf ./package-lock.json && RUN_ENV={env:3} react-builder build && tar cvf build.tar build",
+    "builder:dev": "rm -rf ./package-lock.json && npm install && rm -rf ./package-lock.json && react-builder build && tar cvf build.tar build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "file-version": "time",
+  "dependencies": {
+    "@jxkang/events": "0.0.1",
+    "@jxkang/utils": "0.0.21",
+    "@jxkang/web-cmpt": "0.0.45",
+    "antd": "^3.26.0",
+    "classnames": "^2.2.6",
+    "dva": "^2.4.1",
+    "echarts": "^4.5.0",
+    "echarts-for-react": "^2.0.15-beta.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-loadable": "^5.5.0",
+    "wangeditor": "^3.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://shenghu.tan@bitbucket.jdxiaokang.cn/scm/~shenghu.tan/robot-admin.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "commitlint": "^8.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0"
+  },
+  "wat": {
+    "type": "react"
+  }
+}
